@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>nashi's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="images/icon.jpg" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <!-- サイトタイトル -->
+      <h1 class="site-title">nashi's Portfolio</h1>
+      <!-- 横並びメニュー -->
+      <nav class="nav-menu">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#exp" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#works" class="nav-link">Works</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ (1ページ構成) -->
+  <main>
+    <!-- Homeセクション -->
+    <section id="home" class="section home">
+      <h1>Welcome!</h1>
+      <!-- アイコンとテキストを横並びにするコンテナ -->
+      <div class="home-icon-text-container">
+        <!-- アイコン画像 -->
+        <img src="images/icon.jpg" alt="Welcome Icon" class="nashi-icon">
+        
+        <!-- テキスト部分 -->
+        <div class="home-text">
+          <h2>初めまして、梨です。</h2>
+          <p>ポートフォリオをご覧いただきありがとうございます。
+            <br>普段は神経科学分野の研究でデータ分析をしています。
+            <br>現在サイト作成中です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aboutセクション -->
+    <section id="about" class="section about">
+      <h1>About Me</h1>
+      <div class="timeline">
+        <!-- 1つ目の項目 -->
+        <div class="timeline-dot">
+          <span class="year">2001年</span>
+          <div class="timeline-content">
+            <h3>誕生</h3>
+            <p>大阪府で生まれる。</p>
+          </div>
+        </div>
+
+        <!-- 2つ目の項目 -->
+        <div class="timeline-dot">
+          <span class="year">2020年</span>
+          <div class="timeline-content">
+            <h3>私立四天王寺高等学校 卒業</h3>
+            <p>普通科</p>
+          </div>
+        </div>
+
+        <!-- 3つ目の項目 -->
+        <div class="timeline-dot">
+          <span class="year">2024年</span>
+          <div class="timeline-content">
+            <h3>京都大学 卒業</h3>
+            <p>工学部 電気電子工学科</p>
+          </div>
+        </div>
+
+        <!-- 4つ目の項目 -->
+        <div class="timeline-dot">
+          <span class="year">現在<br>2025年</span>
+          <div class="timeline-content">
+            <h3>京都大学大学院 在籍</h3>
+            <p>情報学研究科 情報学専攻 システム科学コース</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experienceセクション -->
+    <section id="exp" class="section exp">
+      <h1>Experience</h1>
+      <div class="timeline">
+        <div class="timeline-dot">
+          <span class="year">2024年<br>6月</span>
+          <div class="timeline-content">
+            <h3>レイスシステムソリューションズ株式会社 3days RSS Hackathon 2024 "Beyond"</h3>
+            <p>初日:お題に沿ったプロダクト概要の設計。2日目:プロダクト開発。3日目:プレゼン発表。
+              <br>Web開発未経験での参加。Flaskでのバックエンドおよびプレゼン発表を担当。
+              <br>惜しくも表彰台は逃したが、プレゼン評価は1位。
+            </p>
+            <div class="btn-container">
+              <div class="link-btn">
+                GitHub
+                <a href="https://github.com/nashisandesu/RSShackathon" target="_blank" rel="noopener noreferrer"></a>
+              </div>
+              <div class="link-btn">
+                Qiita
+                <a href="https://qiita.com/nashisan/items/8f4b7aea234a74a40d69" target="_blank" rel="noopener noreferrer"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot">
+          <span class="year">2024年<br>7月</span>
+          <div class="timeline-content">
+            <h3>エムスリー株式会社 5days データサイエンティスト実践型インターン</h3>
+            <p>エムスリーの主力プロダクトの成果分析およびサービス改善の提案を行った。
+              <br>実データに近いデータの確認・整理から始まり、納得感を重視したプロダクトを提案した。</p>
+          </div>
+        </div>
+    
+        <div class="timeline-dot">
+          <span class="year">2024年<br>8月</span>
+          <div class="timeline-content">
+            <h3>富士フイルム株式会社 3days 情報系インターンシップ 体験型ハッカソン</h3>
+            <p>富士フイルムの既存事業を学び、今後のさらなる情報技術活用に向けた価値創出アイデア・ソリューションを立案。
+              <br>チーム内MVPを獲得。</p>
+          </div>
+        </div>
+        <div class="timeline-dot">
+          <span class="year">2024年<br>8月</span>
+          <div class="timeline-content">
+            <h3>LINEヤフー株式会社 2weeks エンジニア職データサイエンスコース</h3>
+            <p>「LINEヤフーの治安を守る！モデレーションAIの性能改善に向けた分析」に参加。
+              <br>「Yahoo!ニュース」や「Yahoo!知恵袋」などのユーザー投稿における規約違反の取り締まりを強化するため、モデルの改善に向けた分析・提案を行った。</p>
+          </div>
+        </div>
+        <div class="timeline-dot">
+          <span class="year">2024年<br>9月</span>
+          <div class="timeline-content">
+            <h3>株式会社イノベーション 3days エンジニアアイデアソンインターン</h3>
+            <p>自社サービスをもとに与えられたお題に沿った事業提案を行った。<br>優勝賞金10万円(チーム)を獲得。</p>
+          </div>
+        </div>
+        <div class="timeline-dot">
+          <span class="year">2024年<br>9月</span>
+          <div class="timeline-content">
+            <h3>ビジョナル株式会社 5days Visional Internship 2024「仲間と挑む“リアル”なモノづくり」</h3>
+            <p>エンジニアとデザイナー合同で課題に取り組み、プロダクト設計・提案を行った。
+              <br>バックグラウンドが異なるメンバーとの議論は一筋縄ではいかなかったが、メンバー全員がワクワクできることをモットーに最終日まで駆け抜けた。
+            </p>
+          </div>
+        </div>
+    </section>
+
+    <!-- Skillsセクション -->
+    <section id = "skills" class="section skills">
+      <h1>Skills</h1>
+      <h2>プログラミング言語・ツール</h2>
+        <table class="skill-table">
+          <thead>
+              <tr>
+                  <th>スキル</th>
+                  <th>レベル</th>
+                  <th>できること・実績</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                    <div class="skill-column">
+                      <div class="icon-container">
+                        <i class="fa-brands fa-python pro-icon"></i>
+                      </div>
+                      <div class="text-container">
+                        <p class="skill-name">Python</p>
+                      </div>
+                    </div>
+                  </td>  
+                  <td><p class="level">★★★★☆</p></td>
+                  <td>
+                      <ul>
+                          <li>Pandasを用いたデータ分析</li>
+                          <li>基本的な機械学習モデルの実装</li>
+                          <li>競技プログラミングでのアルゴリズム実装</li>
+                      </ul>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <div class="skill-column">
+                      <div class="icon-container">
+                        <i class="devicon-c-plain colored pro-icon"></i>
+                      </div>
+                      <div class="text-container">
+                        <p class="skill-name">C</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><p class="level">★★★☆☆</p></td>
+                  <td>
+                      <ul>
+                          <li>手書き数字認識の6層NNの実装</li>
+                          <li>LU分解の直接法や反復法などの数理解析実装</li>
+                      </ul>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                    <div class="skill-column">
+                      <div class="icon-container">
+                        <i class="fa-brands fa-html5 pro-icon"></i>
+                      </div>
+                      <div class="text-container">
+                        <p class="skill-name">HTML</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><p class="level">★★☆☆☆</p></td>
+                  <td>
+                      <ul>
+                          <li>本ポートフォリオの作成</li>
+                      </ul>
+                  </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="skill-column">
+                    <div class="icon-container">
+                      <i class="fa-brands fa-css3-alt pro-icon"></i>  
+                    </div>
+                    <div class="text-container">
+                      <p class="skill-name">CSS</p>
+                    </div>
+                  </div>
+                </td>
+                <td><p class="level">★★☆☆☆</p></td>
+                <td>
+                    <ul>
+                        <li>本ポートフォリオの作成</li>
+                    </ul>
+                </td>
+            </tr>
+              <tr>
+                  <td>
+                    <div class="skill-column">
+                      <div class="icon-container">
+                        <i class="fas fa-database pro-icon"></i>
+                      </div>
+                      <div class="text-container">
+                        <p class="skill-name">SQL</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><p class="level">★★☆☆☆</p></td>
+                  <td>
+                      <ul>
+                          <li>データベースの基本操作</li>
+                          <li>データの抽出・集計</li>
+                      </ul>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+
+        
+    <h2>資格</h2>
+    <ul class="ul">
+      <li>応用情報技術者</li>
+      <li>E資格</li>
+      <li>統計検定2級</li>
+      <li>普通自動車免許</li>
+    </ul>
+    </section>
+
+    <!-- Worksセクション -->
+    <section id="works" class="section works">
+      <h1>Works</h1>
+      <ul class ="ul">
+        <li>CodeQUEEN 2024 ファイナリスト</li>
+      </ul>
+    </section>
+
+    <!-- セクション -->
+    <section id="contact" class="section contact">
+      <h1>Contact</h1>
+      <p>各種SNS・ブログはこちら</p>
+      <ul class="ul-sns">
+        <li>    
+          <a href="https://x.com/pear_kyopro" target="_blank" rel="noopener noreferrer"><img src="images/x-icon.png" alt="x-icon" />
+            X
+          </a>
+        </li>
+        <li>    
+          <a href="https://github.com/nashisandesu" target="_blank" rel="noopener noreferrer"><img src="images/github-icon.png" alt="github-icon" />
+          GitHub
+          </a>
+        </li>
+        <li>    
+          <a href="https://qiita.com/nashisan" target="_blank" rel="noopener noreferrer"><img src="images/qiita-icon.png" alt="qiita-icon" />
+          Qiita
+          </a>
+        </li>
+      </ul>  
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nashi's Portfolio Site. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ベースフォント・色味 */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9; /* 少し明るめのグレーを全体背景に */
+  line-height: 1.6;
+}
+
+/* ヘッダー */
+header {
+  background-color: #fff; /* ヘッダーは白でシンプルに */
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.site-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* 横並びメニュー */
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu li {
+  margin: 0.5rem;
+}
+.menu li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* カーソルで左から下線 */
+.menu li a:hover {
+  color: #333;
+}
+
+.menu li a::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 0;
+	height: 2px;
+	background: #333;
+	transition: 0.3s;
+}
+
+.menu li a:hover::before{
+	width: calc(100%);
+}
+
+
+/* ハンバーガーボタン */
+.hamburger {
+  display: none;
+  user-select: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* メニュー切り替え用のチェックボックス（非表示）*/
+.menu-toggle {
+  display: none;
+} 
+
+@media screen and (max-width: 1200px) {
+  .menu {
+      opacity: 0; /* 最初は透明 */
+      visibility: hidden; /* 非表示 */
+      transform: translateY(-10px); /* 少し上にずらす */
+      transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s, color 0.5s;
+
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #333;
+      padding: 10px 0;
+  }
+
+  .menu li {
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .menu li a {
+    color: white;
+  }
+
+  .menu li a:hover {
+    color: white;
+  }
+
+  .menu li a::before{
+    /* color: white; */
+    background: white;
+  }
+
+  .hamburger {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+  }
+
+  /* チェックボックスがチェックされたらメニューを表示スムーズに表示 */
+  .menu-toggle:checked ~ .menu {
+    opacity: 1; /* 透明度100% */
+    visibility: visible; /* 表示 */
+    transform: translateY(0); /* 元の位置に戻す */ 
+  }
+
+  /* メニューを閉じるときスムーズに */
+  .menu-toggle:not(:checked) ~ .menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    visibility: hidden;
+  }
+
+  /* メニューを開いたときにハンバーガーボタンの色を変える */
+  .menu-toggle:checked + .hamburger {
+    color: #ddd;
+  }
+
+
+}
+
+/* セクション共通 (中央寄せ + 余白) */
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  background-color: #fff; /* セクションは白のブロックにする */
+  margin-bottom: 2rem;    /* セクション間に余白を入れて区切り感 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.05); /* ほんのり影 */
+  border-radius: 4px; /* 少し角を丸める */
+}
+.section h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #444;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.section h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.section p {
+  font-size: 1rem;
+}
+
+/* アイコンとテキストを横並びに */
+.home-icon-text-container {
+  display: flex;          /* 横並び表示の基本 */
+  align-items: center;    /* 垂直方向の中央揃え */
+  gap: 1rem;              /* アイコンとテキストの隙間を1remに */
+}
+
+/* アイコン画像のサイズ調整 */
+.nashi-icon {
+  width: 80%;    
+  max-width: 300px;
+}
+
+/* career-list の箇条書きを少しデザイン */
+.ul {
+  list-style: disc;            /* ●箇条書き（好みに応じて circle, square に変更可） */
+  margin-left: 1.5rem;         /* 左余白を少し増やしてインデント */
+  line-height: 1.6;            /* 行間を少し広めに */
+  font-size: 1rem;             
+}
+.ul li {
+  margin-top: 0.5rem;       /* リスト項目間の余白 */
+}
+.ul li::marker {
+  color: gray;
+}
+
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  color: #666;
+  margin-top: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* タイムラインの親要素 */
+.timeline {
+  position: relative;
+  /* 背景色や余白はお好みで */
+}
+
+/* タイムラインの「縦線」を描画 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10%;           
+  width: 2px;
+  height: 100%;        /* セクションの高さ一杯 */
+  background-color: #ccc;
+  transform: none; 
+}
+
+/* タイムラインアイテム */
+.timeline-dot {
+  position: relative;
+  margin: 2rem 0;
+}
+
+/* 擬似要素。マルドット */
+.timeline-dot::before {
+  content: ""; /* 擬似要素には必須 */
+  position: absolute;
+  left: 10%;             
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 2px solid #666;
+  border-radius: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+/* 左側に表示する「年数」 */
+.year {
+  position: absolute;
+  /* ドットの左側に配置するために、アイテムのleft=0から更に左へ */
+  right: 90%;                      /* 左端に配置 */
+  top: 50%;
+  margin-right: 1rem;          /* ドットとの隙間を空ける */
+  transform: translateY(-50%);     /* 必要に応じて微調整 (ex: translateY(-50%)など) */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* タイムラインの内容部分（右側） */
+.timeline-content {
+  margin-top: 1rem;
+  margin-left: calc(10% + 10px); 
+  background-color: #fff;
+  border: 5px double #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+/* snsアイコン */
+.ul-sns {
+  margin-top: 1rem;
+}
+.ul-sns li {
+  height: 2rem;
+  font-size: 20px;
+  list-style: none;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ul-sns li a{
+  display: inline-flex;
+  text-decoration: none;
+  cursor : pointer;
+}
+
+.ul-sns li img{
+  height: 2rem;
+  margin-right: 0.25rem;
+}
+
+/* ボタン周りの設定 */
+/* 横並びボタン */
+.btn-container {
+  display: flex;
+  gap: 0 1rem;
+}
+
+.link-btn {
+  position: relative;
+  width : 10em;
+  margin: 0 0;
+  padding: 0.25rem 0;
+  font-size: 1rem;
+  background-color: #eee;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor : pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.link-btn:hover {
+  background-color: #666;
+  color: #eee;
+}
+
+.link-btn a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+
+/* テーブルデザイン */
+.skill-table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  border: 1px solid #aaa; 
+  background-color: #fff;
+  overflow: hidden;
+}
+
+/* テーブルのヘッダー */
+.skill-table th {
+  background-color: #eee;
+  color: black;
+  padding: 12px;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+/* テーブルのセル */
+.skill-table td {
+  padding: 12px;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+/* 最後の列の右側の線を消す（不要なら追加） */
+.skill-table th:last-child,
+.skill-table td:last-child {
+    border-right: none;
+}
+
+/* スキル名のセルを左寄せ */
+.skill-table td:first-child {
+  text-align: left;
+}
+
+/* アイコン */
+/* Pythonのアイコンの色 */
+.fa-python {
+  color: #3776AB;
+}
+
+/* C言語のアイコンの色（汎用的にコードアイコンを使用） */
+.fa-code {
+  color: #555;
+}
+
+/* HTMLのアイコンの色 */
+.fa-html5 {
+  color: #E34F26;
+}
+
+/* CSSのアイコンの色 */
+.fa-css3-alt {
+  color: #1572B6;
+}
+
+/* SQLのデータベースアイコンの色 */
+.fa-database {
+  color: #f39c12;
+}
+
+/* スキル列のセル */
+.skill-column{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* アイコンのコンテナ */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  width: 50%; 
+}
+
+/* テキストのコンテナ */
+.text-container {
+  display: flex;
+  width: 50%;         
+  align-items: center;
+}
+
+/* アイコンのレイアウト */
+.pro-icon {
+  font-size: 40px;
+  justify-content: center;
+}
+
+/* スキル名のテキスト */
+.skill-name {
+  margin: 0;
+  position: relative;
+  left: 5px;
+  font-size: 18px;
+}
+
+.level{
+  position: relative;
+  text-align: center;
+}
+
+/* 箇条書き */
+.skill-table ul {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+}
